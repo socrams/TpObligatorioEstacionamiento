@@ -37,7 +37,7 @@
     <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet">
   </head>
-  <body class="text-center"> {{} <!--background="fondo.jpg"-->
+  <body class="text-center"> <!--background="fondo.jpg"-->
     
 <form class="form-signin">
   <!--imagen de login--><img class="mb-4" src="https://i.imgur.com/DRUiMyM.png" alt="" width="72" height="72">
