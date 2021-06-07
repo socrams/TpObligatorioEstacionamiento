@@ -71,9 +71,13 @@
     </div>
   </div>
 <div align="center">
+<<<<<<< HEAD
   <?php include "tablaestacionados.php";
 include "usarmetodos.php";
   ?> 
+=======
+  <?php include "tablaestacionados.php";include "usarmetodos.php";?> 
+>>>>>>> 2d78a01d06e4ce8270d8ae54bcb6741193d5716d
 </div>
 </div>
 <!-- tengo q reemplazar el footter por includeonce...
