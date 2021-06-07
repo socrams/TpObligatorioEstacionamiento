@@ -9,7 +9,7 @@
 
 
 
-    <!--style>
+    <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -24,7 +24,7 @@
           font-size: 3.5rem;
         }
       }
-    </style-->
+    </style>
 
     
     <!-- Custom styles for this template -->
