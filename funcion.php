@@ -6,9 +6,6 @@ function IngresarAuto($patente,$fechayhora)
 	$archivo1= fopen($archivoEstacionados, "a");
     fwrite($archivo1,$renglon);
     fclose($archivo1);
-    echo "se ingreso bien";
-   // header("correctopatenteingreso.php");
-
 }
 function LeerArchivo($NomArchivo)
 {
@@ -37,8 +34,7 @@ function dateDifference($fechayhoraSalida, $fechayhora)
 	*/
     $datetime1=new DateTime($fechayhoraSalida);
     $datetime2=new DateTime($fechayhora);
-    echo "entro xD";
-      $minutos= $datetime1->diff($datetime2);
+    $minutos= $datetime1->diff($datetime2);
     $minutos=($minutos->i)+($minutos->h*60)+($minutos->d*24*60);
     return $minutos;
 }
@@ -56,6 +52,7 @@ function cobro($patente,$fechayhora,$fechayhoraSalida)
 	{
 		$n=$minutos/60;
 		$ParteEntera = floor($n);
+
 		$FraccionDeLaHora = $n - $ParteEntera;
 		$FraccionDeLaHora*=60;
 		if ($FraccionDeLaHora<=45 && $FraccionDeLaHora>=30)
@@ -121,6 +118,10 @@ foreach($out as $line) {
 	file_put_contents($archivo, $contents);
 }
 
+function comparar($patente)
+{
+
+}
 /*
 me falta: 
 crear comparar con patentes existentes, si la hay llamar a "\error\error.php".

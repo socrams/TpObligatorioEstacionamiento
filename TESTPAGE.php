@@ -10,7 +10,7 @@
 
 <body>
 
-<form method="get" action="http://aprenderaprogramar.com">
+<form method="get">
 
 <button type="submit">
 
