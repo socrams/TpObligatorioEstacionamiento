@@ -7,7 +7,10 @@ if(isset($_POST['correo']))
 {
 	$mail=$_POST['correo'];	
 }
-
+else
+{
+	die();
+}
 $clave=$_POST['clave'];
 $listadodeusuarios=array();
 
@@ -15,24 +18,14 @@ $archivo=fopen("usuario.txt", "r");
 
 while(!feof($archivo))
 {
-	//echo "renglon: ".fgets($archivo."<br>");
 	$renglon=fgets($archivo);
 	$datosDeUnUsuario=explode("=>",$renglon);
-	if (isset($datosDeUnUsuario[1]))//($datosDeUnUsuario[0]!=" ") 
+	if (isset($datosDeUnUsuario[0]))//($datosDeUnUsuario[0]!=" ") 
 	{
 		$listadodeusuarios[]=$datosDeUnUsuario;
-	}
-	//var_dump($datosDeUnUsuario);
-	/*if($datosDeUnUsuario[0]==$mail)
-	{
-		if ($datosDeUnUsuario[1]==$clave) 
-		{
-			echo "se ha logeado joer";
-		}
-	}*/	
+	}	
 }
 fclose($archivo);
-//var_dump($listadodeusuarios)
 $ingreso="No ingreso";
 
 foreach ($listadodeusuarios as $datos) 
@@ -41,8 +34,8 @@ foreach ($listadodeusuarios as $datos)
 	{
 		if($datos[1]==$clave)
 		{
-			echo "bienve";
-			$ingreso="ingreso";
+			header("Location: estacionar.php");
+						$ingreso="ingreso";
 			break;
 		}
 	}

@@ -18,3 +18,9 @@ html {
 .card-deck .card {
   min-width: 220px;
 }
+button
+{
+	border-color: black;
+	border:solid;
+
+}
