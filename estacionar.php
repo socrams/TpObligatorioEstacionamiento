@@ -71,7 +71,7 @@
     </div>
   </div>
 <div align="center">
-  <?php include "tablaestacionados.php";?> 
+  <?php include "tablaestacionados.php";include "usarmetodos.php";?> 
 </div>
 </div>
 <!-- tengo q reemplazar el footter por includeonce...
