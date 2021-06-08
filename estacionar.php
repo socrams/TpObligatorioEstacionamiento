@@ -26,7 +26,7 @@
 
 <!--recuadro para rellenar y botones debajo dentro del titulo-->
 <form>
-<h1><input name="patente" placeholder="AAA 111" required=""></h1>
+<h1><input style="text-transform: uppercase" maxlength="7" name="patente" placeholder="AAA 111" required=""></h1>
 <h4>
    <button class="button1" type="submit" onclick=this.form.action="ingreso.php"><h4>Ingreso</h4></button>    
    <button class="button2" type="submit" onclick=this.form.action="egreso.php"><h4>Salida</h4></button><!--class="btn btn-lg btn-primario"-->

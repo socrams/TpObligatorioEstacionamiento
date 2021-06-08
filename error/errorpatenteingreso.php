@@ -52,7 +52,7 @@
 
   <main role="main" class="inner cover">
     <h1 class="cover-heading">Error</h1>
-    <p class="lead">Error al ingresar patente o patente ya ingresada</p>
+    <p class="lead">Error al ingresar la patente o al retirar el auto, reingrese dominio</p>
     <p class="lead">
       <a href="\TpObligatorioEstacionamiento\estacionar.php" class="btn btn-lg btn-secondary">Volver</a>
     </p>
