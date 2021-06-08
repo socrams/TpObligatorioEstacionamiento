@@ -10,7 +10,8 @@
   </head>
   <body>
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-  <h3 class="my-0 mr-md-auto font-weight-normal">Estacionar</h3>
+  
+  <h3 class="my-0 mr-md-auto font-weight-normal"><img src="auto.ico" alt="" width="70" height="50">Estacionar</h3>
     <!--<nav class="my-2 my-md-0 mr-md-3">
       <a class="p-2 text-dark" href="#">Features</a>
       <a class="p-2 text-dark" href="#">Enterprise</a>
@@ -26,7 +27,7 @@
 
 <!--recuadro para rellenar y botones debajo dentro del titulo-->
 <form>
-<h1><input style="text-transform: uppercase" maxlength="7" name="patente" placeholder="AAA 111" required=""></h1>
+<h1><input style="text-transform: uppercase" maxlength="7" name="patente" placeholder="AAA 111 / AA 111 AA" required=""></h1>
 <h4>
    <button class="button1" type="submit" onclick=this.form.action="ingreso.php"><h4>Ingreso</h4></button>    
    <button class="button2" type="submit" onclick=this.form.action="egreso.php"><h4>Salida</h4></button><!--class="btn btn-lg btn-primario"-->

@@ -1,5 +1,12 @@
 <!DOCTYPE html>
-<!--ejemplo boton html-->
+
+
+
+
+
+
+<input type="text"  class="form-control" name="patente" id="patente" placeholder="AAA999/AA999AA" pattern=""  value="">
+<!--ejemplo boton htm
 <html>
 
 <head>
@@ -23,5 +30,5 @@ permite contenido HTML en su interior.
 </form>
 
 </body>
-
+l-->
 </html>

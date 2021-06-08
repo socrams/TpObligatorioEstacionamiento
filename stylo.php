@@ -47,4 +47,8 @@
 .button2:hover {
   color: white;
 }
+
+.display-4{
+ border: 2px solid black;
+}
 </style>

@@ -7,7 +7,8 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.80.0">
     <title>:( error :( </title>
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/cover/">
+    <link rel="shorcut icon" href="chocado.jpg">
+    <!--link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/cover/"-->
 
 
     <!-- Bootstrap core CSS -->
@@ -51,6 +52,7 @@
   </header>
 
   <main role="main" class="inner cover">
+    <img class="mb-4" src="chocado.jpg" alt="" width="240" height="129">
     <h1 class="cover-heading">Error</h1>
     <p class="lead">Error al ingresar la patente o al retirar el auto, reingrese dominio</p>
     <p class="lead">
