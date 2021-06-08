@@ -4,6 +4,7 @@ function IngresarAuto($patente,$fechayhora)
 	$archivoEstacionados="estacionados.txt";
 	$renglon=$patente."=>".$fechayhora."\n";
 	$archivo1= fopen($archivoEstacionados, "a");
+
     fwrite($archivo1,$renglon);
     fclose($archivo1);
 }
@@ -41,6 +42,7 @@ function dateDifference($fechayhoraSalida, $fechayhora)
 
 function cobro($patente,$fechayhora,$fechayhoraSalida)
 {
+
 	$PrecioPorMinuto=10;
 	$PrecioPorHora=150;
 	$PrecioMediaHora=100;
@@ -118,15 +120,26 @@ foreach($out as $line) {
 	file_put_contents($archivo, $contents);
 }
 
-function comparar($patente)
+function Comparar($patente,$arrayPatentes,$fechayhoraSalida,$archivo)
 {
-
+	foreach($arrayPatentes as $datos)
+	{   
+	    if($datos[0] == $patente)
+	    {
+			$fechayhora=$datos[1];
+			$datos=$datos[0];
+			$precio=cobro($patente,$fechayhora,$fechayhoraSalida);
+	   		Delete($archivo,$patente,$fechayhora);
+			Registro_de_cobro($patente,$fechayhora,$fechayhoraSalida,$precio);
+		}
+	}
+	if ($patente!=$datos)
+	{
+		header("Location: /TpObligatorioEstacionamiento/error/errorpatenteingreso.php");
+   	}
 }
 /*
 me falta: 
-crear comparar con patentes existentes, si la hay llamar a "\error\error.php".
-crear pantalla de ingreso y egreso exitoso.
-cargar la tabla para creacion automatica.
 agregar menu registro ya creado al index.
 cambiar fotos.
 crequear include y include_once en c/file.-

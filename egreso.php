@@ -6,20 +6,9 @@ $fechayhoraSalida = date("Y-m-d H:i:s");
 $archivo="estacionados.txt";
 $arrayPatentes=LeerArchivo($archivo);
 //fasar a funcion
-
-foreach($arrayPatentes as $datos)
-{   
-    if($datos[0] == $patente)
-    {
-		$fechayhora= $datos[1];
-		$precio=cobro($patente,$fechayhora,$fechayhoraSalida);
-   	}
-}
-Delete($archivo,$patente,$fechayhora);
-echo " total $".$precio;
+Comparar($patente,$arrayPatentes,$fechayhoraSalida,$archivo);
+//echo " total $".$precio;
 /*echo " fecha in ".$fechayhora;
 echo " fecha out ".$fechayhoraSalida;
 echo " precio ".$precio;*/
-Registro_de_cobro($patente,$fechayhora,$fechayhoraSalida,$precio);
-
 ?>
