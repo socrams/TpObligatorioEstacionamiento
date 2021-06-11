@@ -6,7 +6,9 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.80.0">
+    
     <title>:( error :( </title>
+    
     <link rel="shorcut icon" href="chocado.jpg">
     <!--link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/cover/"-->
 
@@ -44,8 +46,8 @@
     <div class="inner">
       <h3 class="masthead-brand">Te Lo Estaciono</h3>
       <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="\TpObligatorioEstacionamiento\login.php">Ingresar</a>
-        <a class="nav-link" href="\TpObligatorioEstacionamiento\index.php">Salir</a>
+        <a class="nav-link active" href="https://teloestaciono.herokuapp.com/estacionar.php">Ingresar</a>
+        <a class="nav-link" href="index.php">Salir</a>
         <!--a class="nav-link" href="#"></a-->
       </nav>
     </div>

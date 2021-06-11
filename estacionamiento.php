@@ -4,17 +4,30 @@ include_once "funcion.php";
 
 class estacionamiento 
 {
-	public static function saludar()
+	/*public static function saludar()
 	{
 		echo "hola";
 	}
-
+*/
 	public static function leer()
 	{
 		//$listaDeAutosLeida=array();
 		$listaDeAutosLeida=LeerArchivo("estacionados.txt","=>");//esta en funcion.php
 		return $listaDeAutosLeida;
 	}
+
+	/*
+	de marcos 
+	public static function retornarListadosAutoComplit(){
+		$arrayPatentes=estacionamiento::leer("estacionados.txt");
+		$listadoRetorno=array();
+		foreach ($arrayPatentes as $datos) {
+			$listadoRetorno="\".$datos[]\",";
+		}
+		return $listadoRetorno;
+	}
+	*/
+
 	public static function CrearTablaEstacionados() 
 	{
 		$listado=estacionamiento::leer();//llama la funcion de arriba

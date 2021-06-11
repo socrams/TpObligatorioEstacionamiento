@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head><?php  include_once"titulo.php";
+  include "estacionamiento.php";
   include_once"stylo.php";
   ?>
       <!-- Bootstrap core CSS -->
@@ -74,7 +75,7 @@
 <div align="center">
 
   <?php 
-  include "usarmetodos.php";
+  estacionamiento::CrearTablaEstacionados();
   include "tablaestacionados.php";
   ?> 
   

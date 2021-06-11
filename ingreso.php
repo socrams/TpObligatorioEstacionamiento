@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <?php include_once "titulo.php";?>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/cover/">
+
     <!-- Bootstrap core CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<style>
+   
+    <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -14,14 +15,14 @@
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-}
+      }
 
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
       }
-    </style>    
+    </style>   
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
   </head>
@@ -46,11 +47,12 @@ date_default_timezone_set("America/Argentina/Buenos_Aires");
 $fechayhora = date("Y-m-d H:i:s");
 $archivo="estacionados.txt";
 IngresarAuto($patente, $fechayhora);
+
 ?>
 
   <main role="main" class="inner cover">
     <h1 class="cover-heading">Correcto</h1>
-    <p class="lead"><?php echo "ingreso patente numero ".$patente.", Hora ".$fechayhora; ?></p>
+    <p class="lead"><?php echo "usted ingreso la patente ".strtoupper($patente).", Hora ".$fechayhora; ?></p>
     <p class="lead">
       <a href="estacionar.php" class="btn btn-lg btn-secondary">Volver</a>
     </p>
@@ -62,6 +64,7 @@ IngresarAuto($patente, $fechayhora);
     </div>
   </footer>
 </div>
-   
-  </body>
+ 
+
+ </body>
 </html>

@@ -1,4 +1,4 @@
-<!doctype html>
+g<!doctype html>
 <html lang="en">
   <head>
     <!-- icono barra  y nombre de pagina 
