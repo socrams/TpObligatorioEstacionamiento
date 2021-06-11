@@ -58,7 +58,7 @@
     <h1 class="cover-heading">Error</h1>
     <p class="lead">Error al ingresar la patente o al retirar el auto, reingrese dominio</p>
     <p class="lead">
-      <a href="\TpObligatorioEstacionamiento\estacionar.php" class="btn btn-lg btn-secondary">Volver</a>
+      <a href="/estacionar.php" class="btn btn-lg btn-secondary">Volver</a>
     </p>
   </main>
 
@@ -103,7 +103,7 @@ countredirect()
 
 <!-- aqui-->
     <div class="inner">
-      <p><a href="#">Te Lo estaciono</a>, by <a href="index.php">@Socrams</a>.</p>
+      <p><a href="#">Te Lo estaciono</a>, by <a href="https://teloestaciono.herokuapp.com/">@Socrams</a>.</p>
     </div>
   </footer>
 </div>
