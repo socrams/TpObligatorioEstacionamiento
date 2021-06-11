@@ -1,28 +1,16 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <?php include_once "titulo.php";?>
+    <?php include_once "titulo.php";
+    include_once "stylo.php";
+    ?>
+
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/cover/">
 
     <!-- Bootstrap core CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
    
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>   
+      
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
   </head>
@@ -59,6 +47,45 @@ IngresarAuto($patente, $fechayhora);
   </main>
 
   <footer class="mastfoot mt-auto">
+
+
+<!--cuenta atras -->
+    <body>
+<form name="redirect" id="redirect">
+<center>
+
+<form>
+<font face="Arial"><input type="text" size="1" name="redirect2" /></font>
+</form>
+<font face="Arial">segundos.</font>
+</center>
+ 
+<script type="text/javascript">
+ 
+var targetURL="https://teloestaciono.herokuapp.com/estacionar.php"
+var countdownfrom=5
+ 
+ 
+var currentsecond=document.redirect.redirect2.value=countdownfrom+1
+function countredirect(){
+    if (currentsecond!=1){
+        currentsecond-=1
+        document.redirect.redirect2.value=currentsecond
+    }else{
+        window.location=targetURL
+        return
+    }
+    setTimeout("countredirect()",1000)
+}
+ 
+countredirect()
+ 
+</script>
+</form>
+</body>
+
+
+<!-- aqui-->
     <div class="inner">
       <p><a href="#">Te Lo estaciono</a>, by <a href="index.php">@Socrams</a>.</p>
     </div>

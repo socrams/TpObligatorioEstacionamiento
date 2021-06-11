@@ -11,8 +11,8 @@
  
 <script type="text/javascript">
  
-var targetURL="http://localhost/TpObligatorioEstacionamiento/estacionar.php"
-var countdownfrom=10
+var targetURL="https://teloestaciono.herokuapp.com/estacionar.php"
+var countdownfrom=5
  
  
 var currentsecond=document.redirect.redirect2.value=countdownfrom+1

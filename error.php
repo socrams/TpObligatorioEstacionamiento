@@ -75,6 +75,52 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+  <footer class="mastfoot mt-auto">
+
+
+<!--cuenta atras -->
+    <body>
+<form name="redirect" id="redirect">
+<center>
+
+<form>
+<font face="Arial"><input type="text" size="1" name="redirect2" /></font>
+</form>
+<font face="Arial">segundos.</font>
+</center>
+ 
+<script type="text/javascript">
+ 
+var targetURL="https://teloestaciono.herokuapp.com/estacionar.php"
+var countdownfrom=5
+ 
+ 
+var currentsecond=document.redirect.redirect2.value=countdownfrom+1
+function countredirect(){
+    if (currentsecond!=1){
+        currentsecond-=1
+        document.redirect.redirect2.value=currentsecond
+    }else{
+        window.location=targetURL
+        return
+    }
+    setTimeout("countredirect()",1000)
+}
+ 
+countredirect()
+ 
+</script>
+</form>
+</body>
+
+
+<!-- aqui-->
+    <div class="inner">
+      <p><a href="#">Te Lo estaciono</a>, by <a href="index.php">@Socrams</a>.</p>
+    </div>
+  </footer>
+
       
   </body>
 </html>
