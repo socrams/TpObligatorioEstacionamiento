@@ -1,4 +1,4 @@
-<html>
+x	<html>
 <body>
 <form name="redirect" id="redirect">
 <center>
@@ -33,3 +33,19 @@ countredirect()
 </form>
 </body>
 </html>
+
+
+<?php 
+function patenteRepetida($arrayPatentes)
+{
+	foreach($arrayPatentes as $datos)
+	{   
+	    if($datos[0] == $patente);
+	    {
+	    echo "la patente se encuentra repetida";
+		}
+	}
+}
+
+
+ ?>

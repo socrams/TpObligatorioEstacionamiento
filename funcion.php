@@ -8,6 +8,7 @@ function IngresarAuto($patente,$fechayhora)
     fwrite($archivo1,$renglon);
     fclose($archivo1);
 }
+
 function LeerArchivo($NomArchivo)
 {
 	$matrizDeRetorno=array();
@@ -138,6 +139,22 @@ function Comparar($patente,$arrayPatentes,$fechayhoraSalida,$archivo)
 		header("Location: error/errorpatenteingreso.php");
    	}
 }
+
+
+function patenteRepetida($arrayPatentes,$patente)
+{
+	foreach($arrayPatentes as $datos)
+	{   
+	    if($datos[0] == $patente);
+	    {
+	    echo " Patente ".$patente; 
+		}
+	}
+
+}
+
+
+
 /*
 me falta: 
 agregar menu registro ya creado al index.
