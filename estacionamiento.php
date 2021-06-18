@@ -74,6 +74,12 @@ public static function leercobro()
 		$tablaHTML.="Patentes";
 		$tablaHTML.="</th>";
 		$tablaHTML.="<th>";
+		$tablaHTML.="Cobrado";
+		$tablaHTML.="</th>";
+		$tablaHTML.="<th>";
+		$tablaHTML.="Fecha y Hora de Egreso";
+		$tablaHTML.="</th>";
+		$tablaHTML.="<th>";
 		$tablaHTML.="Fecha y Hora de Ingreso";
 		$tablaHTML.="</th>";
 		foreach($listado as $auto)
@@ -81,7 +87,7 @@ public static function leercobro()
 			$tablaHTML.="<tr><td>$auto[0]</td><td>$auto[1]</td></tr>";
 		}
 		$tablaHTML.="</table>";
-		$archivo=fopen("tablaestacionados.php","w");
+		$archivo=fopen("tablacobrados.php","w");
 		fwrite($archivo,$tablaHTML);
 		fclose($archivo);
 	}
