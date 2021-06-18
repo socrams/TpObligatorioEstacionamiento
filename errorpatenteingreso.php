@@ -46,7 +46,7 @@
     <div class="inner">
       <h3 class="masthead-brand">Te Lo Estaciono</h3>
       <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="https://teloestaciono.herokuapp.com/estacionar.php">Ingresar</a>
+        <a class="nav-link active" href="TpObligatorioEstacionamiento/estacionar.php">Ingresar</a>
         <a class="nav-link" href="index.php">Salir</a>
         <!--a class="nav-link" href="#"></a-->
       </nav>
@@ -78,7 +78,7 @@
  
 <script type="text/javascript">
  
-var targetURL="https://teloestaciono.herokuapp.com/estacionar.php"
+var targetURL="estacionar.php"
 var countdownfrom=5
  
  

@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <?php include_once "titulo.php";
+    <?php 
+    include_once "titulo.php";
     include_once "stylo.php";
     ?>
 

@@ -136,7 +136,7 @@ function Comparar($patente,$arrayPatentes,$fechayhoraSalida,$archivo)
 	}
 	if ($patente!=$datos)
 	{
-		header("Location: error/errorpatenteingreso.php");
+		header("Location: errorpatenteingreso.php");
    	}
 }
 

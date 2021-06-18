@@ -18,7 +18,7 @@ class estacionamiento
 public static function leercobro()
 	{
 		//$listaDeAutosLeida=array();
-		$listaDeAutosLeida=LeerArchivo("cobrx.txt","=>");//esta en funcion.php
+		$listaDeAutosLeida=LeerArchivo("cobrs.txt","=>");//esta en funcion.php
 		return $listaDeAutosLeida;
 	}
 	/*
@@ -84,7 +84,7 @@ public static function leercobro()
 		$tablaHTML.="</th>";
 		foreach($listado as $auto)
 		{
-			$tablaHTML.="<tr><td>$auto[0]</td><td>$auto[1]</td></tr>";
+			$tablaHTML.="<tr><td>$auto[0]</td><td>$auto[1]</td></tr><td>$auto[2]</td></tr><td>$auto[3]</td></tr>";
 		}
 		$tablaHTML.="</table>";
 		$archivo=fopen("tablacobrados.php","w");
