@@ -46,7 +46,7 @@
     <div class="inner">
       <h3 class="masthead-brand">Te Lo Estaciono</h3>
       <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="TpObligatorioEstacionamiento/estacionar.php">Ingresar</a>
+        <a class="nav-link active" href="estacionar.php">Ingresar</a>
         <a class="nav-link" href="index.php">Salir</a>
         <!--a class="nav-link" href="#"></a-->
       </nav>
@@ -58,7 +58,7 @@
     <h1 class="cover-heading">Error</h1>
     <p class="lead">Error al ingresar la patente o al retirar el auto, reingrese dominio</p>
     <p class="lead">
-      <a href="/estacionar.php" class="btn btn-lg btn-secondary">Volver</a>
+      <a href="estacionar.php" class="btn btn-lg btn-secondary">Volver</a>
     </p>
   </main>
 
