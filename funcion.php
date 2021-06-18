@@ -51,8 +51,7 @@ function cobro($patente,$fechayhora,$fechayhoraSalida)
 	$minutos=dateDifference($fechayhoraSalida,$fechayhora);
 	//$minutos= 85;
 	echo "cantidad de minutos que estuvo estacionado ".$minutos;
-	if ($minutos>60) 
-	{
+	if ($minutos>60)	{
 		$n=$minutos/60;
 		$ParteEntera = floor($n);
 
@@ -141,7 +140,7 @@ function Comparar($patente,$arrayPatentes,$fechayhoraSalida,$archivo)
 }
 
 
-function patenteRepetida($arrayPatentes,$patente)
+/*function patenteRepetida($arrayPatentes,$patente)
 {
 	foreach($arrayPatentes as $datos)
 	{   
@@ -152,7 +151,7 @@ function patenteRepetida($arrayPatentes,$patente)
 	}
 
 }
-
+*/
 
 
 /*

@@ -47,7 +47,7 @@ $fechayhoraSalida = date("Y-m-d H:i:s");
 $archivo="estacionados.txt";
 $arrayPatentes=LeerArchivo($archivo);
 //fasar a funcion
-Comparar($patente,$arrayPatentes,$fechayhoraSalida,$archivo);
+/*Comparar($patente,$arrayPatentes,$fechayhoraSalida,$archivo);*/
 //echo " total $".$precio;
 /*echo " fecha in ".$fechayhora;
 echo " fecha out ".$fechayhoraSalida;

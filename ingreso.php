@@ -36,7 +36,7 @@ date_default_timezone_set("America/Argentina/Buenos_Aires");
 $fechayhora = date("Y-m-d H:i:s");
 $archivo="estacionados.txt";
 $arrayPatentes=LeerArchivo($archivo);
-patenteRepetida($arrayPatentes,$patente);
+/*patenteRepetida($arrayPatentes,$patente);*/
 IngresarAuto($patente, $fechayhora);
 
 
