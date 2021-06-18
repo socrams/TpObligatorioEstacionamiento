@@ -77,6 +77,8 @@
   <?php 
   estacionamiento::CrearTablaEstacionados();
   include "tablaestacionados.php";
+  estacionamiento::CrearTablaCobrados();
+  include "tablacobrados.php";
   ?> 
   
 </div>
