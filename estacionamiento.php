@@ -15,7 +15,12 @@ class estacionamiento
 		$listaDeAutosLeida=LeerArchivo("estacionados.txt","=>");//esta en funcion.php
 		return $listaDeAutosLeida;
 	}
-
+public static function leercobro()
+	{
+		//$listaDeAutosLeida=array();
+		$listaDeAutosLeida=LeerArchivo("cobrx.txt","=>");//esta en funcion.php
+		return $listaDeAutosLeida;
+	}
 	/*
 	de marcos 
 	public static function retornarListadosAutoComplit(){
@@ -58,6 +63,26 @@ class estacionamiento
 				fwrite($archivo,$auto[0]."=>".$auto[1]."\n");
 			}
 		}
+		fclose($archivo);
+	}
+	public static function CrearTablaCobrados() 
+	{
+		$listado=estacionamiento::leercobro();//llama la funcion de arriba
+		$tablaHTML="<table>";
+		$tablaHTML="<table border=1>";
+		$tablaHTML.="<th>";
+		$tablaHTML.="Patentes";
+		$tablaHTML.="</th>";
+		$tablaHTML.="<th>";
+		$tablaHTML.="Fecha y Hora de Ingreso";
+		$tablaHTML.="</th>";
+		foreach($listado as $auto)
+		{
+			$tablaHTML.="<tr><td>$auto[0]</td><td>$auto[1]</td></tr>";
+		}
+		$tablaHTML.="</table>";
+		$archivo=fopen("tablaestacionados.php","w");
+		fwrite($archivo,$tablaHTML);
 		fclose($archivo);
 	}
 }
