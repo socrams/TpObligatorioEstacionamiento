@@ -1,19 +1,10 @@
-<table border=1><th>Patentes</th><th>Fecha y Hora de Ingreso</th><tr><td>456456</td><td>2021-06-11 20:29:27
-</td></tr><tr><td>456456</td><td>2021-06-11 20:29:32
-</td></tr><tr><td>345</td><td>2021-06-11 20:35:55
-</td></tr><tr><td>123</td><td>2021-06-11 20:39:34
-</td></tr><tr><td>aaa111</td><td>2021-06-11 21:09:41
-</td></tr><tr><td>432</td><td>2021-06-11 21:09:58
-</td></tr><tr><td>543</td><td>2021-06-11 21:11:02
-</td></tr><tr><td>234</td><td>2021-06-11 21:11:19
-</td></tr><tr><td>345</td><td>2021-06-11 21:11:24
-</td></tr><tr><td>123</td><td>2021-06-11 21:11:36
-</td></tr><tr><td>565</td><td>2021-06-11 21:14:28
-</td></tr><tr><td>345</td><td>2021-06-11 21:14:46
-</td></tr><tr><td>456</td><td>2021-06-11 21:16:57
-</td></tr><tr><td>543</td><td>2021-06-11 21:17:04
-</td></tr><tr><td>345</td><td>2021-06-11 21:18:25
-</td></tr><tr><td>123</td><td>2021-06-11 21:23:06
-</td></tr><tr><td>345</td><td>2021-06-11 21:23:31
-</td></tr><tr><td>765</td><td>2021-06-11 21:24:42
+<table border=1><th>Patentes</th><th>Fecha y Hora de Ingreso</th><th>GNC</th><tr><td>41234</td><td>2021-06-18 20:22:37</td><td>sin GNC
+</td></tr><tr><td>1234123</td><td>2021-06-18 20:23:13</td><td>con GNC
+</td></tr><tr><td>1234123</td><td>2021-06-18 20:23:13</td><td>con GNC
+</td></tr><tr><td>1234123</td><td>2021-06-18 20:25:51</td><td>sin GNC
+</td></tr><tr><td>1234123</td><td>2021-06-18 20:25:55</td><td>sin GNC
+</td></tr><tr><td>1234123</td><td>2021-06-18 20:25:59</td><td>sin GNC
+</td></tr><tr><td>1234123</td><td>2021-06-18 20:26:12</td><td>sin GNC
+</td></tr><tr><td>xcxx</td><td>2021-06-18 20:26:16</td><td>sin GNC
+</td></tr><tr><td>1234123</td><td>2021-06-18 20:26:34</td><td>NO
 </td></tr></table>

@@ -40,7 +40,7 @@
   </header>
 
 <?php
-include_once 'funcion.php';
+include'funcion.php';
 $patente = $_GET['patente'];
 date_default_timezone_set("America/Argentina/Buenos_Aires"); 
 $fechayhoraSalida = date("Y-m-d H:i:s");

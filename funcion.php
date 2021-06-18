@@ -1,8 +1,16 @@
 <?php  
 function IngresarAuto($patente,$fechayhora)
 {
+	if (isset($_GET["gnc"]))
+	{
+		$gnc1="SI";
+	}
+	else
+	{
+		$gnc1="NO";
+	}
 	$archivoEstacionados="estacionados.txt";
-	$renglon=$patente."=>".$fechayhora."\n";
+	$renglon=$patente."=>".$fechayhora."=>".$gnc1."\n";
 	$archivo1= fopen($archivoEstacionados, "a");
 
     fwrite($archivo1,$renglon);
@@ -51,8 +59,7 @@ function cobro($patente,$fechayhora,$fechayhoraSalida)
 	$minutos=dateDifference($fechayhoraSalida,$fechayhora);
 	//$minutos= 85;
 	echo "cantidad de minutos que estuvo estacionado ".$minutos;
-	if ($minutos>60) 
-	{
+	if ($minutos>60)	{
 		$n=$minutos/60;
 		$ParteEntera = floor($n);
 
@@ -95,26 +102,6 @@ function Registro_de_cobro($patente,$fechayhora,$fechayhoraSalida,$cobro)
 
 function Delete($archivo,$patente,$fechayhora)
 {
-	/*$DELETE = $arrayPatentes;
-
-	$data = file("estacionados.txt");
-
-	$out = array();
-
-	foreach($data as $line) 
-	{
-	    if(trim($line) != $DELETE) 
-	    {
-	        $out[] = $line;
-	    }
-	}
-$fp = fopen("./foo.txt", "w+");
-flock($fp, LOCK_EX);
-foreach($out as $line) {
-	     fwrite($fp, $line);
-	 }
-	 flock($fp, LOCK_UN);
-	 fclose($fp);  */
 	$renglon=$patente."=>".$fechayhora;
 	$contents = file_get_contents($archivo);
 	$contents = str_replace($renglon,'', $contents);
@@ -128,20 +115,22 @@ function Comparar($patente,$arrayPatentes,$fechayhoraSalida,$archivo)
 	    if($datos[0] == $patente)
 	    {
 			$fechayhora=$datos[1];
-			$datos=$datos[0];
+			$datos1=$datos[0];
 			$precio=cobro($patente,$fechayhora,$fechayhoraSalida);
 	   		Delete($archivo,$patente,$fechayhora);
-			Registro_de_cobro($patente,$fechayhora,$fechayhoraSalida,$precio);
+	   		Registro_de_cobro($patente,$fechayhora,$fechayhoraSalida,$precio);
 		}
+
 	}
-	if ($patente!=$datos)
+	if ($patente!=$datos1)
 	{
-		header("Location: error/errorpatenteingreso.php");
+		
+		header("Location: errorpatenteingreso.php");
    	}
 }
 
 
-function patenteRepetida($arrayPatentes,$patente)
+/*function patenteRepetida($arrayPatentes,$patente)
 {
 	foreach($arrayPatentes as $datos)
 	{   
@@ -152,7 +141,7 @@ function patenteRepetida($arrayPatentes,$patente)
 	}
 
 }
-
+*/
 
 
 /*

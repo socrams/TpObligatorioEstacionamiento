@@ -25,9 +25,11 @@
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h1 class="display-4">Vehiculos</h1>
       <p class="lead">Ingrese a continuacion el numero de patente</p>
+<form>
+<h2><input type="checkbox" name="gnc" ><label>Tiene GNC ?</label></input></h2>
 
 <!--recuadro para rellenar y botones debajo dentro del titulo-->
-<form>
+
 <h1><input style="text-transform: uppercase" maxlength="7" name="patente" placeholder="AAA 111 / AA 111 AA" required=""></h1>
 <h4>
    <button class="button1" type="submit" onclick=this.form.action="ingreso.php"><h4>Ingreso</h4></button>    
@@ -72,7 +74,7 @@
       </div>
     </div>
   </div>
-<div align="center">
+<div style = "float: left;">
 
   <?php 
   estacionamiento::CrearTablaEstacionados();
@@ -80,6 +82,12 @@
   ?> 
   
 </div>
+<div style = "float: right;">
+
+  <?php 
+estacionamiento::CrearTablaCobrados();
+  include "tablacobrados.php";
+  ?>
 </div>
 <!-- tengo q reemplazar el footter por includeonce...
 <footer class="pt-4 my-md-5 pt-md-5 border-top">
