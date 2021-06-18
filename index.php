@@ -22,6 +22,9 @@ include_once "titulo.php";
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
+        <a class="nav-link" href="registro.php">Registrarse<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
         <a class="nav-link" href="login.php">Ingreso<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">

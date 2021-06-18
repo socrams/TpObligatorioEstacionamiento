@@ -94,26 +94,6 @@ function Registro_de_cobro($patente,$fechayhora,$fechayhoraSalida,$cobro)
 
 function Delete($archivo,$patente,$fechayhora)
 {
-	/*$DELETE = $arrayPatentes;
-
-	$data = file("estacionados.txt");
-
-	$out = array();
-
-	foreach($data as $line) 
-	{
-	    if(trim($line) != $DELETE) 
-	    {
-	        $out[] = $line;
-	    }
-	}
-$fp = fopen("./foo.txt", "w+");
-flock($fp, LOCK_EX);
-foreach($out as $line) {
-	     fwrite($fp, $line);
-	 }
-	 flock($fp, LOCK_UN);
-	 fclose($fp);  */
 	$renglon=$patente."=>".$fechayhora;
 	$contents = file_get_contents($archivo);
 	$contents = str_replace($renglon,'', $contents);
@@ -127,14 +107,16 @@ function Comparar($patente,$arrayPatentes,$fechayhoraSalida,$archivo)
 	    if($datos[0] == $patente)
 	    {
 			$fechayhora=$datos[1];
-			$datos=$datos[0];
+			$datos1=$datos[0];
 			$precio=cobro($patente,$fechayhora,$fechayhoraSalida);
 	   		Delete($archivo,$patente,$fechayhora);
-			Registro_de_cobro($patente,$fechayhora,$fechayhoraSalida,$precio);
+	   		Registro_de_cobro($patente,$fechayhora,$fechayhoraSalida,$precio);
 		}
+
 	}
-	if ($patente!=$datos)
+	if ($patente!=$datos1)
 	{
+		
 		header("Location: errorpatenteingreso.php");
    	}
 }

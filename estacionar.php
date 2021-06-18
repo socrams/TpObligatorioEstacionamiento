@@ -72,16 +72,20 @@
       </div>
     </div>
   </div>
-<div align="center">
+<div style = "float: left;">
 
   <?php 
   estacionamiento::CrearTablaEstacionados();
   include "tablaestacionados.php";
-  estacionamiento::CrearTablaCobrados();
-  include "tablacobrados.php";
   ?> 
   
 </div>
+<div style = "float: right;">
+
+  <?php 
+estacionamiento::CrearTablaCobrados();
+  include "tablacobrados.php";
+  ?>
 </div>
 <!-- tengo q reemplazar el footter por includeonce...
 <footer class="pt-4 my-md-5 pt-md-5 border-top">
