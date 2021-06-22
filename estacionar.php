@@ -26,6 +26,14 @@
   <h1 class="display-4">Vehiculos</h1>
       <p class="lead">Ingrese a continuacion el numero de patente</p>
 <form>
+<div style="float:right;">
+  <input type="radio" name="tipo" value="alta">
+  <label for="alta">   Gama Alta</label><br>
+  <input type="radio" name="tipo" value="media">
+  <label for="media">Gama Media</label><br>
+  <input type="radio" name="tipo" value="baja">
+  <label for="baja">   Gama Baja</label>
+</div>
 <h2><input type="checkbox" name="gnc" ><label>Tiene GNC ?</label></input></h2>
 
 <!--recuadro para rellenar y botones debajo dentro del titulo-->

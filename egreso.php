@@ -47,7 +47,7 @@ $fechayhoraSalida = date("Y-m-d H:i:s");
 $archivo="estacionados.txt";
 $arrayPatentes=LeerArchivo($archivo);
 //fasar a funcion
-Comparar($patente,$arrayPatentes,$fechayhoraSalida,$archivo);
+$precio=Comparar($patente,$arrayPatentes,$fechayhoraSalida,$archivo);
 //echo " total $".$precio;
 /*echo " fecha in ".$fechayhora;
 echo " fecha out ".$fechayhoraSalida;
@@ -55,7 +55,7 @@ echo " precio ".$precio;*/
 ?>
   <main role="main" class="inner cover">
     <h1 class="cover-heading">Correcto</h1>
-    <p class="lead"><?php echo "Se retiro la patente numero ".$patente.", Hora ".$fechayhoraSalida; ?></p>
+    <p class="lead"><?php echo "Se retiro la patente numero ".$patente.", Hora ".$fechayhoraSalida."  Valor: $".$precio; ?></p>
     <p class="lead">
       <a href="estacionar.php" class="btn btn-lg btn-secondary">Volver</a>
     </p>

@@ -9,8 +9,27 @@ function IngresarAuto($patente,$fechayhora)
 	{
 		$gnc1="NO";
 	}
+	if (isset($_GET["tipo"]))
+	{
+		if ($_GET["tipo"] == "alta")
+		{
+			$gama=$_GET["tipo"];
+		}
+		else if ($_GET["tipo"] == "media") 
+		{
+		 $gama=$_GET["tipo"];
+		}
+		else if ($_GET["tipo"] == "baja") 
+		{
+			$gama=$_GET["tipo"];
+		}
+	}
+	else{
+	 $gama="No Ingresada";
+	}
+
 	$archivoEstacionados="estacionados.txt";
-	$renglon=$patente."=>".$fechayhora."=>".$gnc1."\n";
+	$renglon=$patente."=>".$fechayhora."=>".$gnc1."=>".$gama."\n";
 	$archivo1= fopen($archivoEstacionados, "a");
 
     fwrite($archivo1,$renglon);
@@ -100,9 +119,9 @@ function Registro_de_cobro($patente,$fechayhora,$fechayhoraSalida,$cobro)
 	fclose($cobrados);
 }
 
-function Delete($archivo,$patente,$fechayhora)
+function Delete($archivo,$patente,$fechayhora,$gnc1,$gama)
 {
-	$renglon=$patente."=>".$fechayhora;
+	$renglon=$patente."=>".$fechayhora."=>".$gnc1."=>".$gama;
 	$contents = file_get_contents($archivo);
 	$contents = str_replace($renglon,'', $contents);
 	file_put_contents($archivo, $contents);
@@ -116,17 +135,33 @@ function Comparar($patente,$arrayPatentes,$fechayhoraSalida,$archivo)
 	    {
 			$fechayhora=$datos[1];
 			$datos1=$datos[0];
+			$gnc1=$datos[2];
+			$gama=$datos[3];
 			$precio=cobro($patente,$fechayhora,$fechayhoraSalida);
-	   		Delete($archivo,$patente,$fechayhora);
-	   		Registro_de_cobro($patente,$fechayhora,$fechayhoraSalida,$precio);
+			var_dump ($gama);
+			if ($gama=="alta")
+			{				
+				$precio=$precio+(20*$precio/100);
+				
+		   	}
+		   	else if ($gama=="media")
+			{				
+				$precio=$precio+(10*$precio/100);
+		   	}
+		   	if ($gnc1=="SI"){
+		   		$precio=$precio+50;
+		   	}
+		   	Delete($archivo,$patente,$fechayhora,$gnc1,$gama);
+		   	Registro_de_cobro($patente,$fechayhora,$fechayhoraSalida,$precio);
 		}
-
+		var_dump($precio);
 	}
 	if ($patente!=$datos1)
 	{
 		
 		header("Location: errorpatenteingreso.php");
    	}
+return $precio;
 }
 
 
@@ -143,11 +178,4 @@ function Comparar($patente,$arrayPatentes,$fechayhoraSalida,$archivo)
 }
 */
 
-
-/*
-me falta: 
-agregar menu registro ya creado al index.
-cambiar fotos.
-crequear include y include_once en c/file.-
-*/
 ?>
