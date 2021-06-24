@@ -13,21 +13,26 @@
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
   
   <h3 class="my-0 mr-md-auto font-weight-normal"><img src="auto.ico" alt="" width="70" height="50">Estacionar</h3>
-    <!--<nav class="my-2 my-md-0 mr-md-3">
-      <a class="p-2 text-dark" href="#">Features</a>
-      <a class="p-2 text-dark" href="#">Enterprise</a>
-      <a class="p-2 text-dark" href="#">Support</a>
-      <a class="p-2 text-dark" href="#">Pricing</a>
-    </nav>-->
+    
   <a class="btn btn-outline-primary" href="login.php">Salir</a>
 </div>
 
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h1 class="display-4">Vehiculos</h1>
       <p class="lead">Ingrese a continuacion el numero de patente</p>
+<form>
+<div style="float:right;">
+  <input type="radio" name="tipo" value="alta">
+  <label for="alta">   Gama Alta</label><br>
+  <input type="radio" name="tipo" value="media">
+  <label for="media">  Gama Media</label><br>
+  <input type="radio" name="tipo" value="baja">
+  <label for="baja">   Gama Baja</label>
+</div>
+<h2><input type="checkbox" name="gnc" ><label>Tiene GNC ?</label></input></h2>
 
 <!--recuadro para rellenar y botones debajo dentro del titulo-->
-<form>
+
 <h1><input style="text-transform: uppercase" maxlength="7" name="patente" placeholder="AAA 111 / AA 111 AA" required=""></h1>
 <h4>
    <button class="button1" type="submit" onclick=this.form.action="ingreso.php"><h4>Ingreso</h4></button>    

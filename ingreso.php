@@ -32,6 +32,9 @@
 <?php 
 include_once 'funcion.php';
 $patente=$_GET["patente"];
+/*if (isset($_GET["gnc"])){
+echo "tiene gnc la puta madre";
+}*/
 date_default_timezone_set("America/Argentina/Buenos_Aires");
 $fechayhora = date("Y-m-d H:i:s");
 $archivo="estacionados.txt";
@@ -64,9 +67,9 @@ IngresarAuto($patente, $fechayhora);
 <font face="Arial">segundos.</font>
 </center>
  
-<script type="text/javascript">
+<!--script type="text/javascript">
  
-var targetURL="https://teloestaciono.herokuapp.com/estacionar.php"
+var targetURL="TpObligatorioEstacionamiento/estacionar.php"
 var countdownfrom=5
  
  
@@ -84,7 +87,7 @@ function countredirect(){
  
 countredirect()
  
-</script>
+</script-->
 </form>
 </body>
 

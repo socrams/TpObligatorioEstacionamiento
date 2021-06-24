@@ -44,9 +44,15 @@ public static function leercobro()
 		$tablaHTML.="<th>";
 		$tablaHTML.="Fecha y Hora de Ingreso";
 		$tablaHTML.="</th>";
+		$tablaHTML.="<th>";
+		$tablaHTML.="GNC";
+		$tablaHTML.="</th>";
+		$tablaHTML.="<th>";
+		$tablaHTML.="Gama";
+		$tablaHTML.="</th>";
 		foreach($listado as $auto)
 		{
-			$tablaHTML.="<tr><td>$auto[0]</td><td>$auto[1]</td></tr>";
+			$tablaHTML.="<tr><td>$auto[0]</td><td>$auto[1]</td><td>$auto[2]</td><td>$auto[3]</td></tr>";
 		}
 		$tablaHTML.="</table>";
 		$archivo=fopen("tablaestacionados.php","w");

@@ -1,10 +1,1 @@
-<table border=1><th>Patentes</th><th>Cobrado</th><th>Fecha y Hora de Egreso</th><th>Fecha y Hora de Ingreso</th><tr><td>123</td><td>80</td><td>2021-06-18 17:42:49</td><td>2021-06-18 17:42:31
-</td></tr><tr><td>123</td><td>80</td><td>2021-06-18 17:42:49</td><td>2021-06-18 17:42:41
-</td></tr><tr><td>234</td><td>80</td><td>2021-06-18 17:44:06</td><td>2021-06-18 17:42:46
-</td></tr><tr><td>123</td><td>80</td><td>2021-06-18 17:49:49</td><td>2021-06-18 17:49:46
-</td></tr><tr><td>123</td><td>80</td><td>2021-06-18 17:50:22</td><td>2021-06-18 17:50:20
-</td></tr><tr><td>4123412</td><td>80</td><td>2021-06-18 17:50:42</td><td>2021-06-18 17:50:32
-</td></tr><tr><td>1234</td><td>80</td><td>2021-06-18 17:50:53</td><td>2021-06-18 17:50:46
-</td></tr><tr><td>1234</td><td>80</td><td>2021-06-18 17:50:53</td><td>2021-06-18 17:50:50
-</td></tr><tr><td>1234123</td><td>80</td><td>2021-06-18 17:56:41</td><td>2021-06-18 17:56:38
-</td></tr></table>
+<table border=1><th>Patentes</th><th>Cobrado</th><th>Fecha y Hora de Egreso</th><th>Fecha y Hora de Ingreso</th><tr><td>1234</td><td>80</td><td>2021-06-18 21:53:39</td><td>2021-06-18 21:53:331234</td></tr></table>
