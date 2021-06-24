@@ -34,7 +34,6 @@
       <nav class="nav nav-masthead justify-content-center">
         <a class="nav-link active" href="\TpObligatorioEstacionamiento\login.php">Ingresar</a>
         <a class="nav-link" href="index.php">Salir</a>
-        <!--a class="nav-link" href="#"></a-->
       </nav>
     </div>
   </header>
@@ -46,12 +45,7 @@ date_default_timezone_set("America/Argentina/Buenos_Aires");
 $fechayhoraSalida = date("Y-m-d H:i:s");
 $archivo="estacionados.txt";
 $arrayPatentes=LeerArchivo($archivo);
-//fasar a funcion
 $precio=Comparar($patente,$arrayPatentes,$fechayhoraSalida,$archivo);
-//echo " total $".$precio;
-/*echo " fecha in ".$fechayhora;
-echo " fecha out ".$fechayhoraSalida;
-echo " precio ".$precio;*/
 ?>
   <main role="main" class="inner cover">
     <h1 class="cover-heading">Correcto</h1>

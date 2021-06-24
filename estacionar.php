@@ -25,11 +25,7 @@
   <input type="radio" name="tipo" value="alta">
   <label for="alta">   Gama Alta</label><br>
   <input type="radio" name="tipo" value="media">
-<<<<<<< HEAD
   <label for="media">  Gama Media</label><br>
-=======
-  <label for="media">Gama Media</label><br>
->>>>>>> c637da4cbe012984781e8053f4af69dccafa9bd6
   <input type="radio" name="tipo" value="baja">
   <label for="baja">   Gama Baja</label>
 </div>

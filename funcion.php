@@ -11,20 +11,21 @@ function IngresarAuto($patente,$fechayhora)
 	}
 	if (isset($_GET["tipo"]))
 	{
-		if ($_GET["tipo"] == "alta")
+		if ($_GET["tipo"] == 'alta')
 		{
 			$gama=$_GET["tipo"];
 		}
-		else if ($_GET["tipo"] == "media") 
+		else if ($_GET["tipo"] == 'media') 
 		{
 		 $gama=$_GET["tipo"];
 		}
-		else if ($_GET["tipo"] == "baja") 
+		else if ($_GET["tipo"] == 'baja') 
 		{
 			$gama=$_GET["tipo"];
 		}
 	}
-	else{
+	else
+	{
 	 $gama="No Ingresada";
 	}
 
@@ -68,17 +69,17 @@ function dateDifference($fechayhoraSalida, $fechayhora)
     return $minutos;
 }
 
-function cobro($patente,$fechayhora,$fechayhoraSalida,$gama)
+function cobro($patente,$fechayhora,$fechayhoraSalida,$gnc1,$gama)
 {
-
 	$PrecioPorMinuto=10;
 	$PrecioPorHora=150;
 	$PrecioMediaHora=100;
 	$PrecioCuartoHora=80;
 	$minutos=dateDifference($fechayhoraSalida,$fechayhora);
 	//$minutos= 85;
-	echo "cantidad de minutos que estuvo estacionado ".$minutos;
-	if ($minutos>60)	{
+	echo "Cantidad de minutos que estuvo estacionado ".$minutos;
+	if ($minutos>60)	
+	{
 		$n=$minutos/60;
 		$ParteEntera = floor($n);
 
@@ -108,40 +109,29 @@ function cobro($patente,$fechayhora,$fechayhoraSalida,$gama)
 			$precio=$PrecioCuartoHora;
 		}
 	}
-	var_dump($gama);
-	switch($gama)
-        {
-            case 'alta':
-                $precio = $precio*1.2;
-               	echo "holaalta";
-                break;
-            case 'media':
-                $precio = $precio*1.1;
-                echo "holamedia";
-                break;
-            default:
-                $precio;
-                break;
-        }
-	/*if ($gama=="alta ")
-	{				
-		$precio=$precio+((20*$precio)/100);
-		echo(" hola ".$precio."atla entro ".$gama);
-		
+	
+	//+50pe si tiene gnc
+   	switch ($gama)
+	{
+		case "alta\n":
+			$precio=$precio*1.2;
+			break;
+		case "media\n":
+			$precio=$precio*1.1;
+			break;
+		default:
+			break;
+	}
+	if ($gnc1=="SI")
+   	{
+   		$precio=$precio+50;
    	}
-   	else if (strcmp($precio,"media ") == 0) //($gama=="media ")
-	{				
-		$precio=$precio+(10*$precio/100);
-		echo(" hola ".$precio."media entro ".$gama);
-   	}
-   	*/
-
 	return $precio;
 }
 
 function Registro_de_cobro($patente,$fechayhora,$fechayhoraSalida,$cobro)
 {
-	$renglon=$patente."=>".$cobro."=>".$fechayhoraSalida."=>".$fechayhora;
+	$renglon=$patente."=>".$cobro."=>".$fechayhoraSalida."=>".$fechayhora."\n";
 	$cobrados=fopen("cobrs.txt", "a");
 	fwrite($cobrados,$renglon);
 	fclose($cobrados);
@@ -165,49 +155,19 @@ function Comparar($patente,$arrayPatentes,$fechayhoraSalida,$archivo)
 			$datos1=$datos[0];
 			$gnc1=$datos[2];
 			$gama=$datos[3];
-<<<<<<< HEAD
-			$precio=cobro($patente,$fechayhora,$fechayhoraSalida,$gama);
-			//var_dump ($gama);
+			$precio=cobro($patente,$fechayhora,$fechayhoraSalida,$gnc1,$gama);
 		   	Delete($archivo,$patente,$fechayhora,$gnc1,$gama);
 		   	Registro_de_cobro($patente,$fechayhora,$fechayhoraSalida,$precio);
+		   	
 		}
-		//var_dump($precio);
-=======
-			$precio=cobro($patente,$fechayhora,$fechayhoraSalida);
-			var_dump ($gama);
-			if ($gama=="alta")
-			{				
-				$precio=$precio+(20*$precio/100);
-				
-		   	}
-		   	else if ($gama=="media")
-			{				
-				$precio=$precio+(10*$precio/100);
-		   	}
-		   	if ($gnc1=="SI"){
-		   		$precio=$precio+50;
-		   	}
-		   	Delete($archivo,$patente,$fechayhora,$gnc1,$gama);
-		   	Registro_de_cobro($patente,$fechayhora,$fechayhoraSalida,$precio);
-		}
-		var_dump($precio);
->>>>>>> c637da4cbe012984781e8053f4af69dccafa9bd6
 	}
 	if ($patente!=$datos1)
 	{
 		
 		header("Location: errorpatenteingreso.php");
    	}
-<<<<<<< HEAD
-   	if ($gnc1=="SI")
-   	{
-   		$precio=$precio+50;
-   	}
-=======
->>>>>>> c637da4cbe012984781e8053f4af69dccafa9bd6
 return $precio;
 }
-
 
 /*function patenteRepetida($arrayPatentes,$patente)
 {
