@@ -165,22 +165,46 @@ function Comparar($patente,$arrayPatentes,$fechayhoraSalida,$archivo)
 			$datos1=$datos[0];
 			$gnc1=$datos[2];
 			$gama=$datos[3];
+<<<<<<< HEAD
 			$precio=cobro($patente,$fechayhora,$fechayhoraSalida,$gama);
 			//var_dump ($gama);
 		   	Delete($archivo,$patente,$fechayhora,$gnc1,$gama);
 		   	Registro_de_cobro($patente,$fechayhora,$fechayhoraSalida,$precio);
 		}
 		//var_dump($precio);
+=======
+			$precio=cobro($patente,$fechayhora,$fechayhoraSalida);
+			var_dump ($gama);
+			if ($gama=="alta")
+			{				
+				$precio=$precio+(20*$precio/100);
+				
+		   	}
+		   	else if ($gama=="media")
+			{				
+				$precio=$precio+(10*$precio/100);
+		   	}
+		   	if ($gnc1=="SI"){
+		   		$precio=$precio+50;
+		   	}
+		   	Delete($archivo,$patente,$fechayhora,$gnc1,$gama);
+		   	Registro_de_cobro($patente,$fechayhora,$fechayhoraSalida,$precio);
+		}
+		var_dump($precio);
+>>>>>>> c637da4cbe012984781e8053f4af69dccafa9bd6
 	}
 	if ($patente!=$datos1)
 	{
 		
 		header("Location: errorpatenteingreso.php");
    	}
+<<<<<<< HEAD
    	if ($gnc1=="SI")
    	{
    		$precio=$precio+50;
    	}
+=======
+>>>>>>> c637da4cbe012984781e8053f4af69dccafa9bd6
 return $precio;
 }
 
