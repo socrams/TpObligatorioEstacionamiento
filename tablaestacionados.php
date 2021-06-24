@@ -1,0 +1,1 @@
+<table border=1><th>Patentes</th><th>Fecha y Hora de Ingreso</th><th>GNC</th><th>Gama</th></table>
