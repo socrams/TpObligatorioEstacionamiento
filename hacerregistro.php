@@ -16,6 +16,7 @@ if ($clave==$copiaclave)
 	$archivo=fopen("usuario.txt","a");
 	fwrite($archivo,$renglon);
 	fclose($archivo);
+	header("Location: login.php");
 }
 else
 {
