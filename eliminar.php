@@ -1,5 +1,6 @@
-<!--a href="Eliminar.php?name=img/<?php echo $archivos[$i]; ?>" 
-style="color: red;">
+<!--a href="Eliminar.php?name=img/
+<?php// echo $archivos[$i]; ?>
+"style="color: red;">
     Eliminar
 </a-->
 <?php
