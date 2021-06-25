@@ -40,6 +40,7 @@ foreach ($listadodeusuarios as $datos)
 		}
 	}
 }
+setcookie("usario",$mail);
 
 if ($ingreso=="No ingreso")
 {

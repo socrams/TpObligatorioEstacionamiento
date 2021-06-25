@@ -169,17 +169,4 @@ function Comparar($patente,$arrayPatentes,$fechayhoraSalida,$archivo)
 return $precio;
 }
 
-/*function patenteRepetida($arrayPatentes,$patente)
-{
-	foreach($arrayPatentes as $datos)
-	{   
-	    if($datos[0] == $patente);
-	    {
-	    echo " Patente ".$patente; 
-		}
-	}
-
-}
-*/
-
 ?>

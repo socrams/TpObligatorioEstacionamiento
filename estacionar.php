@@ -20,6 +20,7 @@
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h1 class="display-4">Vehiculos</h1>
       <p class="lead">Ingrese a continuacion el numero de patente</p>
+
 <form>
 <div style="float:right;">
   <input type="radio" name="tipo" value="alta">
@@ -30,9 +31,7 @@
   <label for="baja">   Gama Baja</label>
 </div>
 <h2><input type="checkbox" name="gnc" ><label>Tiene GNC ?</label></input></h2>
-
 <!--recuadro para rellenar y botones debajo dentro del titulo-->
-
 <h1><input style="text-transform: uppercase" maxlength="7" name="patente" placeholder="AAA 111 / AA 111 AA" required=""></h1>
 <h4>
    <button class="button1" type="submit" onclick=this.form.action="ingreso.php"><h4>Ingreso</h4></button>    
@@ -41,8 +40,42 @@
   </form>
 </div>
 
+<form align="center" action="jpg.php" method="POST" enctype="multipart/form-data"/>
+  Ingrese una imagen
+  <input name="archivo" id="archivo" type="file"/>
+  <input type="submit" name="subir" value="Subir imagen"/>
+</form>
+<!--
+<div align="center">
+  <form action="jpg.php" method="POST" enctype="multipart/form-data">
+    <label>Ingrese una imagen</label>
+      <br><input type="file" name="imagen"><br>
+      <br><input type="submit" value="Enviar la imagen">
+  </form>
+</div>
+-->
+<div>
+  
+<?php
+// Esto devolverá todos los archivos de esa carpeta
+$archivos = scandir("img/");
+$num=0;
+for ($i=2; $i<count($archivos); $i++)
+{$num++;
+?>
+<!-- Visualización del nombre del archivo !-->
+         
+    <tr>
+      <th scope="row"><?php echo $num;?></th>
+      <td><?php echo $archivos[$i]; ?></td>
+      <td><a title="Descargar Archivo" href="subidas/<?php echo $archivos[$i]; ?>" download="<?php echo $archivos[$i]; ?>" style="color: blue; font-size:18px;"> <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> </a></td>
+      <td><a title="Eliminar Archivo" href="Eliminar.php?name=img/<?php echo $archivos[$i]; ?>" style="color: red; font-size:18px;" onclick="return confirm('Esta seguro de eliminar el archivo?');"> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> </a></td>
+    </tr>
+ <?php }?>
 
 
+</div>
+<br>
 <div class="container">
   <div class="card-deck mb-3 text-center">
     <div class="card mb-4 shadow-sm">
