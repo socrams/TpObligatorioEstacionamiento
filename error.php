@@ -92,7 +92,7 @@
  
 <script type="text/javascript">
  
-var targetURL="/TpObligatorioEstacionamiento/login.php"
+var targetURL="estacionar.php"
 var countdownfrom=5
  
  

@@ -39,41 +39,42 @@
 </h4>
   </form>
 </div>
+<div  style="float: left;">
+ <!--stylo boton descargar y eliminar bootstrap3.4 (no lo encontre en el link de la nueva)-->
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
 
-<form align="center" action="jpg.php" method="POST" enctype="multipart/form-data"/>
-  Ingrese una imagen
-  <input name="archivo" id="archivo" type="file"/>
-  <input type="submit" name="subir" value="Subir imagen"/>
+<form style="margin-left: 6px" method="POST" action="jpg.php" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <br><input type="submit" value="Subir Archivo"><br>
 </form>
-<!--
-<div align="center">
-  <form action="jpg.php" method="POST" enctype="multipart/form-data">
-    <label>Ingrese una imagen</label>
-      <br><input type="file" name="imagen"><br>
-      <br><input type="submit" value="Enviar la imagen">
-  </form>
-</div>
--->
-<div>
-  
+<br>
 <?php
 // Esto devolverá todos los archivos de esa carpeta
-$archivos = scandir("img/");
+$archivos = scandir("img");
 $num=0;
+
+?>
+<table border="1"><th></th><th> Nombre de Archivo </th> <th> Descargar </th> <th> Eliminar </th>
+<?php
 for ($i=2; $i<count($archivos); $i++)
-{$num++;
+{
+  $num++;
 ?>
 <!-- Visualización del nombre del archivo !-->
-         
-    <tr>
-      <th scope="row"><?php echo $num;?></th>
+    
+      <tr><th scope="row"><?php echo $num;?></th>
       <td><?php echo $archivos[$i]; ?></td>
-      <td><a title="Descargar Archivo" href="subidas/<?php echo $archivos[$i]; ?>" download="<?php echo $archivos[$i]; ?>" style="color: blue; font-size:18px;"> <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> </a></td>
-      <td><a title="Eliminar Archivo" href="Eliminar.php?name=img/<?php echo $archivos[$i]; ?>" style="color: red; font-size:18px;" onclick="return confirm('Esta seguro de eliminar el archivo?');"> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> </a></td>
+      <td align="center"><a  title="Descargar Archivo" href="img/<?php echo $archivos[$i]; ?>" download="<?php echo $archivos[$i]; ?>"- style="color: blue; font-size:18px;"> 
+        <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></td>
+
+      <td align="center"><a title="Eliminar Archivo" href="Eliminar.php?name=img/<?php echo $archivos[$i]; ?>" style="color: red; font-size:18px;" onclick="return confirm('Esta seguro de eliminar el archivo?');"> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
     </tr>
- <?php }?>
+    
+ <?php 
+}
 
-
+ ?>
+</table>
 </div>
 <br>
 <div class="container">

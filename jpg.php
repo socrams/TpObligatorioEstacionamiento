@@ -1,6 +1,33 @@
 <?php
 
-//Si se quiere subir una imagen
+
+$fichero = $_FILES["file"];
+move_uploaded_file($fichero["tmp_name"], "img/".$fichero["name"]);
+
+header("Location: estacionar.php");
+/*
+if(!empty($_GET['file']))
+{
+    $fileName = basename($_GET['file']);
+    $filePath = 'img/'.$fileName;
+    if(!empty($fileName) && file_exists($filePath))
+    {
+        // Read the file
+        readfile($filePath);
+        
+        exit;
+        // Redirigiendo hacia atrás
+          
+    }else
+    {
+        echo 'The file does not exist.';
+    }
+}
+
+*/
+/*
+
+//Muestra la imagen subida, y la sube tambien, verificca el tipo de imagen que sube, tamaño.
 if (isset($_POST['subir'])) 
 {
    //Recogemos el archivo enviado por el formulario
@@ -42,26 +69,20 @@ if (isset($_POST['subir']))
 }
 
 
+*/
+/*
+
+// Cómo subir el archivo
+$fichero = $_FILES["file"];
+
+// Cargando el fichero en la carpeta "subidas"
+move_uploaded_file($fichero["tmp_name"], "img/".$fichero["name"]);
+
+// Redirigiendo hacia atrás
+header("Location: img/");
 
 
-if(!empty($_GET['archivo']))
-{
-    $fileName = basename($_GET['archivo']);
-    $filePath = 'img/'.$fileName;
-    if(!empty($fileName) && file_exists($filePath))
-    {
-        // Read the file
-        readfile($filePath);
-        exit;
-    }else
-    {
-        echo 'The file does not exist.';
-    }
-}
-
-
-
-
+*/
 
 ?>
 

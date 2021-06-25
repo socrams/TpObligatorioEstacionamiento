@@ -56,6 +56,27 @@ $precio=Comparar($patente,$arrayPatentes,$fechayhoraSalida,$archivo);
   </main>
 
   <footer class="mastfoot mt-auto">
+    <script type="text/javascript">
+//termprizador 5 seg vuelve solo. 
+var targetURL="estacionar.php"
+var countdownfrom=5
+ 
+ 
+var currentsecond=document.redirect.redirect2.value=countdownfrom+1
+function countredirect(){
+    if (currentsecond!=1){
+        currentsecond-=1
+        document.redirect.redirect2.value=currentsecond
+    }else{
+        window.location=targetURL
+        return
+    }
+    setTimeout("countredirect()",1000)
+}
+ 
+countredirect()
+ 
+</script>
     <div class="inner">
       <p><a href="#">Te Lo estaciono</a>, by <a href="index.php">@Socrams</a>.</p>
     </div>

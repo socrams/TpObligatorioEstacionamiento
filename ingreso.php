@@ -32,9 +32,6 @@
 <?php 
 include_once 'funcion.php';
 $patente=$_GET["patente"];
-/*if (isset($_GET["gnc"])){
-echo "tiene gnc la puta madre";
-}*/
 date_default_timezone_set("America/Argentina/Buenos_Aires");
 $fechayhora = date("Y-m-d H:i:s");
 $archivo="estacionados.txt";
@@ -67,27 +64,27 @@ IngresarAuto($patente, $fechayhora);
 <font face="Arial">segundos.</font>
 </center>
  
-<!--script type="text/javascript">
- 
-var targetURL="TpObligatorioEstacionamiento/estacionar.php"
-var countdownfrom=5
- 
- 
+
+<script type="text/javascript">
+//termprizador 5 seg vuelve solo. 
+var targetURL="estacionar.php"
+var countdownfrom=5 
 var currentsecond=document.redirect.redirect2.value=countdownfrom+1
-function countredirect(){
-    if (currentsecond!=1){
-        currentsecond-=1
-        document.redirect.redirect2.value=currentsecond
-    }else{
-        window.location=targetURL
-        return
-    }
-    setTimeout("countredirect()",1000)
+function countredirect()
+{
+  if (currentsecond!=1)
+  {
+    currentsecond-=1
+    document.redirect.redirect2.value=currentsecond
+  }else
+  {
+    window.location=targetURL
+    return
+  }
+  setTimeout("countredirect()",1000)
 }
- 
 countredirect()
- 
-</script-->
+</script>
 </form>
 </body>
 
