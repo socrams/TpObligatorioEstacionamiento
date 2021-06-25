@@ -67,7 +67,7 @@ for ($i=2; $i<count($archivos); $i++)
       <td align="center"><a  title="Descargar Archivo" href="img/<?php echo $archivos[$i]; ?>" download="<?php echo $archivos[$i]; ?>"- style="color: blue; font-size:18px;"> 
         <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a></td>
 
-      <td align="center"><a title="Eliminar Archivo" href="eliminar.php" style="color: red; font-size:18px;" onclick="return confirm('Esta seguro de eliminar el archivo?');"> 
+      <td align="center"><a title="Eliminar Archivo" href="eliminar.php?name=img/<?php echo $archivos[$i]; ?>" style="color: red; font-size:18px;" onclick="return confirm('Esta seguro de eliminar el archivo?');"> 
         <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
     </tr>
     
